@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
     resetToken:{type:String,required:false},
 })
 
-const UserModel = mongoose.model("userArba",userSchema)
+const UserModel = mongoose.model("asynquser",userSchema)
 
 module.exports = {
     UserModel

@@ -2,7 +2,6 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 
 const bcrypt = require("bcrypt");
-const { UserModel } = require("../model/Usermodel");
 const cors = require("cors");
 const fs = require("fs");
 const { body, validationResult } = require("express-validator");
@@ -10,6 +9,7 @@ const { uploadOnCloudinary } = require("../utils/cloudinary");
 const cloudinary = require("cloudinary").v2;
 require("dotenv").config();
 const multer = require("multer");
+const { UserModel } = require("../models/Usermodel");
 const upload = multer({ dest: "uploads/" });
 
 //   --------------- User Validation ------------->
