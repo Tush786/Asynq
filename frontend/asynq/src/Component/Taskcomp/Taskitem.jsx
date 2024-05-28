@@ -68,7 +68,7 @@ async function fetchData() {
   } else {
     return (
         <>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 lg:gap-4 sm:gap-0 md:gap-2 md:grid-cols-2 sm:grid-cols-1">
           {taskData?.map((task, index) => (
             <Taskcard key={index} {...task} />
           ))}

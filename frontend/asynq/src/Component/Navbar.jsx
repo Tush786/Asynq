@@ -39,10 +39,15 @@ import {
     const toast=useToast()
     const User = useSelector((state) => state.user.user);
     console.log(User.username);
-    const {username}=User
+    
   
     const token = useSelector((state) => state.user.token);
     console.log(token);
+
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
+   
+    const {username}=userdata
+    
   
     const handleLogout = () => {
       localStorage.removeItem("Token");

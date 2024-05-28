@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
-
 import {
   Button,
   Input,
@@ -15,7 +14,6 @@ import {
 
 import { AiTwotoneEye } from "react-icons/ai";
 import { AiTwotoneEyeInvisible } from "react-icons/ai";
-// import Loginbanner from '../../Images/capture.png'
 import { LoginUser, getUser } from "../../redux/action";
 import { RESET_USER } from "../../redux/actiontype";
 
@@ -71,9 +69,9 @@ function Login() {
       return;
     }
 
-    dispatch(LoginUser(user)).then(()=>{
-      dispatch(getUser(""))
-    })
+    dispatch(LoginUser(user)).then(() => {
+      dispatch(getUser(""));
+    });
 
     setUser({
       email: "",
@@ -81,9 +79,9 @@ function Login() {
     });
 
     Navigate("/");
-     };
+  };
 
- useEffect(() => {
+  useEffect(() => {
     // Check if token exists
     if (token) {
       // Reload the page
@@ -119,19 +117,20 @@ function Login() {
     dispatch({ type: RESET_USER, payload: "" });
   }, [statuscode]);
 
- 
   useEffect(() => {
     const Token = localStorage.getItem("Token");
     if (Token) {
       Navigate("/");
     }
   }, []);
-  
 
   return (
     <section className="h-screen flex flex-col  md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
       <div className="md:w-1/3 max-w-sm">
-        <img src='https://t3.ftcdn.net/jpg/03/39/70/90/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg' alt="Sample image" />
+        <img
+          src="https://t3.ftcdn.net/jpg/03/39/70/90/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg"
+          alt="Sample image"
+        />
       </div>
       <div className="md:w-1/3 max-w-sm">
         <div className="flex justify-center py-4 items-center gap-6 ">
@@ -175,11 +174,10 @@ function Login() {
             <span>Remember Me</span>
           </label>
           <a
-          onClick={()=>{
-            Navigate('/forgetpassword')
-          }}
+            onClick={() => {
+              Navigate("/forgetpassword");
+            }}
             className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4"
-           
           >
             Forgot Password?
           </a>

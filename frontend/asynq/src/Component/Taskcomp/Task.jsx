@@ -32,7 +32,6 @@ function Task() {
 
   const toast = useToast();
   const dispatch = useDispatch();
-  const TaskData = useSelector((state) => state.user.Taskdata);
   const Editing = useSelector((state) => state.user.editing);
   const Editid = useSelector((state) => state.user.editformid);
   const taskdata = useSelector((state) => state.user.Taskdata);
@@ -45,7 +44,7 @@ function Task() {
       ...prevState,
       [name]: updatedValue,
     }));
-    console.log(taskform);
+    console.log("Updated taskform:", taskform); // Log state after each change
   }
 
   function handleSubmit(e) {
@@ -70,6 +69,8 @@ function Task() {
       });
     }
 
+    console.log("Submitted taskform:", taskform); // Log state on form submission
+
     setTaskform({
       title: "",
       taskdate: "",
@@ -91,7 +92,7 @@ function Task() {
   const today = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="w-[90%] m-auto border-dashed">
+    <div className="lg:w-[90%] md:w-[90%] sm:w-[100%] m-auto border-dashed">
       <Box className="flex justify-end my-4">
         <Button onClick={onOpen}>Add Task</Button>
       </Box>
