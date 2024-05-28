@@ -38,15 +38,13 @@ import {
     const dispatch=useDispatch()
     const toast=useToast()
     const User = useSelector((state) => state.user.user);
-    console.log(User.username);
+    // console.log(User.username);
     
   
     const token = useSelector((state) => state.user.token);
     console.log(token);
 
-    const userdata = JSON.parse(localStorage.getItem("userdata"));
-   
-    const {username}=userdata
+  
     
   
     const handleLogout = () => {
@@ -153,7 +151,8 @@ import {
                       bg: useColorModeValue("#D3D3D3", "rgba(0, 0, 0, 0.20)"),
                     }}
                   >
-                    {!username?"User Name":username}
+                    {/* {!username?"User Name":username} */}
+                    User Name
                   </MenuItem>
                   <MenuDivider />
                   <MenuItem
