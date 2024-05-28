@@ -1,6 +1,10 @@
 # MERN Task Manager APP
 
 A MERN application for basic tasks management.
+<h1>Demo user and password to check fuctionality</h1>
+<h3>Email: tusharsapate34@gmail.com</h3>
+<h3>Pass: Tushar@123</h3>
+
 <h1>Login/Signup Page</h1>
 <a href="https://ibb.co/VBwpjnH"><img src="https://i.ibb.co/s3WJmx5/Login.png" alt="Login" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
 <a href="https://ibb.co/vz4b220"><img src="https://i.ibb.co/ThMZzz9/Login-M.png" alt="Login-M" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
