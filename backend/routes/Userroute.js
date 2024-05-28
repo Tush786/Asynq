@@ -88,13 +88,13 @@ UserRouter.post("/signup", upload.single("avatar"), async (req, res) => {
       const { fullName, userName, email, password, avatar } = req.body;
 
       // Check if avatar URL is provided
-      const avatarLocalPath = req.file?.path;
-      if (!avatarLocalPath) {
-          throw new Error("Avatar URL is required");
-      }
+      // const avatarLocalPath = req.file?.path;
+      // if (!avatarLocalPath) {
+      //     throw new Error("Avatar URL is required");
+      // }
 
       const userPresent = await UserModel.findOne({ email });
-      const avatarsrc = await uploadOnCloudinary(avatarLocalPath);
+      // const avatarsrc = await uploadOnCloudinary(avatarLocalPath);
 
       if (userPresent) {
           return res.status(409).send("Email already exists in database");
@@ -112,7 +112,8 @@ UserRouter.post("/signup", upload.single("avatar"), async (req, res) => {
               userName,
               email,
               password: hash,
-              avatar:avatarsrc.url
+              avatar
+              // avatar:avatarsrc.url
           });
 
           await new_user.save();
