@@ -16,7 +16,7 @@ import {
 export const getUser = (id) => async (dispatch) => {
     // console.log(id)
     try {
-      const user = await axios.get(`http://localhost:8088/user/${id}`);
+      const user = await axios.get(`https://asynq-onpv.onrender.com/user/${id}`);
   
       // // const userObj = {
       // //   userid:user.data.user_present._id,
@@ -36,7 +36,7 @@ export const getUser = (id) => async (dispatch) => {
   
   export const addUser = (user) => async (dispatch) => {
     try {
-      const res = await axios.post(`http://localhost:8088/user/signup`, {
+      const res = await axios.post(`https://asynq-onpv.onrender.com/user/signup`, {
         ...user,
       });
       // console.log(res.status);
@@ -57,7 +57,7 @@ export const getUser = (id) => async (dispatch) => {
   export const LoginUser = (user) => async (dispatch) => {
     console.log(user);
     try {
-      const res = await axios.post(`http://localhost:8088/user/login`, {
+      const res = await axios.post(`https://asynq-onpv.onrender.com/user/login`, {
         ...user,
       });
       console.log(res.data);
@@ -93,7 +93,7 @@ export const getUser = (id) => async (dispatch) => {
   
   export const setUser = (_id) => async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:8088//user/${_id}`);
+      const res = await axios.get(`https://asynq-onpv.onrender.com/user/${_id}`);
       // console.log(res);
       dispatch({
         type: LOGIN_USER,
@@ -110,7 +110,7 @@ export const getUser = (id) => async (dispatch) => {
   export const editUser = (user,id) => async (dispatch) => {
     console.log(user,id)
     try {
-     const resp= await axios.patch(`http://localhost:8088/user/editUser/${id}`, {
+     const resp= await axios.patch(`https://asynq-onpv.onrender.com/user/editUser/${id}`, {
         ...user,
       });
       // console.log(resp)
@@ -126,7 +126,7 @@ export const getUser = (id) => async (dispatch) => {
   export const editAvatar = (avatar,id) => async (dispatch) => {
     console.log(avatar,id)
     try {
-     const resp= await axios.patch(`http://localhost:8088/user/avatar/${id}`, avatar);
+     const resp= await axios.patch(`https://asynq-onpv.onrender.com/user/avatar/${id}`, avatar);
       // console.log(resp)
       // dispatch({
       //   type: EDIT_USER,
@@ -162,7 +162,7 @@ export const Addtask = (task) => async (dispatch) => {
 
     // Send POST request to create a new task
     const resp = await axios.post(
-      `http://localhost:8088/task/createTask/`,
+      `https://asynq-onpv.onrender.com/task/createTask`,
       task,
       config
     );
@@ -192,7 +192,7 @@ export const getTaskData = (page,limit) => async (dispatch) => {
   };
   try {
     const gettask = await axios.get(
-      `http://localhost:8088/task/getTask?page=${page}&limit=${limit}`,
+      `https://asynq-onpv.onrender.com/task/getTask?page=${page}&limit=${limit}`,
       config
     );
     console.log(gettask.data.tasks);
@@ -214,7 +214,7 @@ export const RemoveTask = (_id) => async (dispatch) => {
   };
   try {
     const resp = await axios.delete(
-      `http://localhost:8088/task/deleteTask/${_id}`,
+      `https://asynq-onpv.onrender.com/task/deleteTask/${_id}`,
       config
     );
     dispatch({
@@ -237,7 +237,7 @@ export const editTask = (updatedTaskData,taskId) => async (dispatch) => {
   try {
     // Send PATCH request to update the task
     const response = await axios.patch(
-      `http://localhost:8088/task/updatetask/${taskId}`,
+      `https://asynq-onpv.onrender.com/task/updatetask/${taskId}`,
       updatedTaskData,config
     );
    console.log(response.data)
@@ -262,7 +262,7 @@ export const statuschange = (taskId, updatedTaskData) => async (dispatch) => {
   try {
     // Send PATCH request to update the task
     const response = await axios.patch(
-      `http://localhost:8088/task/updatetask/${taskId}`,
+      `https://asynq-onpv.onrender.com/task/updatetask/${taskId}`,
       updatedTaskData,config
     );
    console.log(response.data)

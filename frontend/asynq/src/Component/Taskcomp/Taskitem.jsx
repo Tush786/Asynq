@@ -9,7 +9,7 @@ function Taskitem() {
   const dispatch = useDispatch();
   const TaskData = useSelector((state) => state.user.Taskdata);
   const [page, setPage] = useState(1);
-  const [limit] = useState(4); // Limit is constant for this pagination
+  const [limit] = useState(8); // Limit is constant for this pagination
   const [totalPages, setTotalPages] = useState(1); // Initialize to 1 initially
   const taskData = useSelector((state) => state.user.Taskdata);
   const pageD = useSelector((state) => state.user.page);
@@ -28,7 +28,7 @@ async function fetchData() {
     };
     try {
       const response = await axios.get(
-        `https://taskbackend-u0a1.onrender.com/task/getTask`,
+        `https://asynq-onpv.onrender.com/task/getTask`,
         config
       );
       console.log(response.data);
