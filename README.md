@@ -1,17 +1,26 @@
 # MERN Task Manager APP
 
 A MERN application for basic tasks management.
-<h1>Landing Page</h1>
-<a href="https://ibb.co/KqWzDTZ"><img src="https://i.ibb.co/PhgzMqp/Signup-Page.png" alt="Signup-Page" border="0"></a>
+<h1>Login/Signup Page</h1>
+<a href="https://ibb.co/VBwpjnH"><img src="https://i.ibb.co/s3WJmx5/Login.png" alt="Login" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+<a href="https://ibb.co/vz4b220"><img src="https://i.ibb.co/ThMZzz9/Login-M.png" alt="Login-M" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+
+
 
 <h1>Task Page</h1>
-<a href="https://ibb.co/WFvVJ68"><img src="https://i.ibb.co/Dkfr2tc/Task-Page.png" alt="Task-Page" border="0"></a>
+<a href="https://ibb.co/mSXVJ9V"><img src="https://i.ibb.co/nRnNr7N/SC-H.png" alt="SC-H" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+<a href="https://ibb.co/xFRmT1V"><img src="https://i.ibb.co/sWM5YKL/SC-Lap-edit.png" alt="SC-Lap-edit" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+
+<a href="https://ibb.co/34f5tXL"><img src="https://i.ibb.co/Qp87sB1/Addtask-form.png" alt="Addtask-form" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+
+<a href="https://ibb.co/QrV8cJ7"><img src="https://i.ibb.co/SRgQx6D/Profile.png" alt="Profile" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+
+<a href="https://ibb.co/x5dhs4L"><img src="https://i.ibb.co/zfDs5kx/Full-des.png" alt="Full-des" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
+
+<a href="https://ibb.co/L95Dh8t"><img src="https://i.ibb.co/tYXwP4s/SC-M-H.png" alt="SC-M-H" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>facebook photos public</a><br />
 
 <h1>User Profile</h1>
 <a href="https://ibb.co/mzVpCBn"><img src="https://i.ibb.co/ThxyBTQ/Profile.png" alt="Profile" border="0"></a><br /><a target='_blank' href='https://usefulwebtool.com/convert-text-to-binary'>binary to words converter</a><br />
-
-<h1>Toggle Status</h1>
-<a href="https://ibb.co/qpCM4YV"><img src="https://i.ibb.co/w47Nbhj/toggle-Status.png" alt="toggle-Status" border="0"></a><br /><a target='_blank' href='https://usefulwebtool.com/convert-text-to-binary'>binary to words converter</a><br />
 
 ## Table of Contents
 
