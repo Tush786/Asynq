@@ -349,7 +349,8 @@ function Signup({ onClose, onOpen }) {
 
   const dispatch = useDispatch();
 
-    const statuscode = useSelector((state) => state.user.statuscode);
+    var statuscode = useSelector((state) => state.user.statuscode);
+    // console.log(statuscode);
 
   const token = useSelector((state) => state.user.token);
 
@@ -378,7 +379,7 @@ function Signup({ onClose, onOpen }) {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const HandleSubmit = async (e) => {
+  const HandleSubmit = async (e,statuscode) => {
     e.preventDefault();
     const { userName, fullName, email, password, cpassword, avatar } = user;
 
@@ -429,42 +430,49 @@ function Signup({ onClose, onOpen }) {
 
     dispatch(addUser(user));
 
-    // Clear form fields after submission
-    setUser({
-      userName: "",
-      fullName: "",
-      email: "",
-      password: "",
-      cpassword: "",
-      avatar: "",
-    });
+
+
+   
+
+
   };
 
-    useEffect(() => {
-      if (statuscode === "201") {
-        toast({
-          title: "Login successful",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
-      } else if (statuscode === "200") {
-        toast({
-          title: "Signup successful",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
-      } else if (statuscode === "409") {
-        toast({
-          title: "Email Already Exists",
-          status: "error",
-          duration: 3000,
-          isClosable: true,
-        });
-      }
+  
+  useEffect(() => {
+    console.log(statuscode)
+    if (statuscode =="200") {
+      toast({
+        title: "Signup successful",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      Navigate('/Login')
+    } else if (statuscode === "409") {
+      toast({
+        title: "Email Already Exists",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    if (statuscode) {
+      // dispatch({ type: RESET_USER });
       dispatch({ type: RESET_USER, payload: "" });
-    }, [statuscode]);
+      setUser({
+        userName: "",
+        fullName: "",
+        email: "",
+        password: "",
+        cpassword: "",
+        avatar: "https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp",
+      });
+    }
+
+   
+  }, [statuscode, dispatch, toast]);
+  
+  
 
   return (
     <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">

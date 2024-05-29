@@ -24,7 +24,7 @@ function Login() {
   const handleClick = () => setShow(!show);
 
   const dispatch = useDispatch();
-  const statuscode = useSelector((state) => state.user.statuscode);
+  const statuscode = useSelector((state) => state.user.statuscodel);
   // const statuscode="200"
   const token = useSelector((state) => state.user.token);
   // const token="guririnrnrgnoiuy8"

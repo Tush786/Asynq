@@ -17,6 +17,7 @@ const initialState = {
   user: {},
   loggedIn: false,
   statuscode: "",
+  statuscodel: "",
   token: "",
   Taskdata: [],
   isLoading: false,
@@ -31,12 +32,12 @@ export const Reducer = (state = initialState, { type, payload }) => {
     case EDIT_USER:
       return { ...state, user: payload };
     case POST_USER:
-      return { ...state, status: payload };
+      return { ...state, statuscode: payload };
     case LOGIN_USER:
       return {
         ...state,
         user: payload.currUser,
-        statuscode: payload.statuscode,
+        statuscodel: payload.statuscode,
         loggedIn: true,
         token: payload.token,
       };

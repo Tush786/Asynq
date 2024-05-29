@@ -42,7 +42,7 @@ function TaskCard({ title, description, taskdate, _id, status, priority }) {
   const [editpriority, setEditpriority] = useState(priority);
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const truncatedDescription = description.split(" ").slice(0, 5).join(" ");
+  const truncatedDescription = description.split(" ").slice(0, 4).join(" ");
 
   async function deleteTask(_id) {
     dispatch(RemoveTask(_id)).then(() => {
@@ -95,7 +95,7 @@ function TaskCard({ title, description, taskdate, _id, status, priority }) {
   }
 
   return (
-    <div className="w-[400px]">
+    <div className="w-[95%] mb-4">
       <Card className="text-left">
         <CardHeader className="flex justify-between items-center">
           <Heading size="md">Task Report</Heading>

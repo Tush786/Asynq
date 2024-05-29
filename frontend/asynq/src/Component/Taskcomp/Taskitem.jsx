@@ -68,11 +68,11 @@ async function fetchData() {
   } else {
     return (
         <>
-        <div className="grid lg:grid-cols-4 lg:gap-4 sm:gap-0 md:gap-2 md:grid-cols-2 sm:grid-cols-1">
-          {taskData?.map((task, index) => (
-            <Taskcard key={index} {...task} />
-          ))}
-        </div>
+       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+    {taskData?.map((task, index) => (
+      <Taskcard key={index} className="flex-1 min-w-[200px] max-w-[400px]" {...task} />
+    ))}
+  </div>
   
         {totalPages > 1 && (
           <div className="mt-8">
